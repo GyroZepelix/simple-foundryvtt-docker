@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+
+  foundry:
+    image: gyrozepelix/simple-foundryvtt:latest
+    build: .
+    volumes:
+      - ./foundry/data:/foundry/data
+      - ./foundry/app:/foundry/app
+    ports:
+      - "30000:30000"
